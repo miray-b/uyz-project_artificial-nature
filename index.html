@@ -22,45 +22,18 @@
         }
 
         .video-wrapper {
-            position: relative;
             width: 100%;
             background: #000;
             aspect-ratio: 16 / 9;
-            overflow: hidden;
+            display: flex;
         }
 
-        /* Video artık hep burada ama başlangıçta tıklamaları almıyor */
+        /* Videoyu doğrudan tüm alanı kaplayacak şekilde ayarlıyoruz */
         video {
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            display: block;
-        }
-
-        /* Üstteki Siyah Kapak Katmanı */
-        #overlay {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: #0b0b0b;
-            display: flex; justify-content: center; align-items: center;
-            z-index: 10;
             cursor: pointer;
-        }
-
-        .play-btn {
-            width: 70px; height: 70px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            transition: 0.3s;
-        }
-
-        .play-icon {
-            width: 0; height: 0;
-            border-top: 16px solid transparent;
-            border-bottom: 16px solid transparent;
-            border-left: 24px solid white;
-            margin-left: 6px;
         }
 
         .text-content {
@@ -75,12 +48,9 @@
 
     <div class="card">
         <div class="video-wrapper">
-            <div id="overlay">
-                <div class="play-btn"><div class="play-icon"></div></div>
-            </div>
-            
-            <video id="myVideo" controls playsinline>
+            <video id="myVideo" controls playsinline preload="auto">
                 <source src="./video.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
             </video>
         </div>
         
@@ -88,18 +58,6 @@
             ARTIFICIAL NATURE, PURE MATH
         </div>
     </div>
-
-    <script>
-        const overlay = document.getElementById('overlay');
-        const video = document.getElementById('myVideo');
-
-        overlay.addEventListener('click', function() {
-            // Kapağı tamamen kaldır
-            overlay.style.display = 'none';
-            // Videoyu oynat
-            video.play();
-        });
-    </script>
 
 </body>
 </html>
