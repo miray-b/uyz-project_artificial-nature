@@ -107,21 +107,27 @@
     </div>
 
     <script>
-        // Tıklama işlevselliğini ekliyoruz
         const container = document.getElementById('videoContainer');
         const playBtn = document.getElementById('playButton');
         const video = document.getElementById('myVideo');
 
+        // Sadece İLK tıklama için bir kontrol ekliyoruz
+        let isStarted = false;
+
         container.addEventListener('click', function() {
-            // Oynatma tuşunu gizle
-            playBtn.style.display = 'none';
-            // Videoyu görünür yap ve oynat
-            video.style.display = 'block';
-            video.play();
-            // Tıklanabilir özelliği kaldır ki video kontrolleri (durdur/sarı vs.) rahat kullanılsın
-            container.style.cursor = 'default';
+            if (!isStarted) {
+                // İlk tıklamada butonu gizle ve videoyu başlat
+                playBtn.style.display = 'none';
+                video.style.display = 'block';
+                video.play();
+                isStarted = true;
+                
+                // Artık container'ın tıklama olayını pasif hale getiriyoruz 
+                // ki videonun kendi durdurma tuşları çalışabilsin
+                container.style.pointerEvents = 'none'; 
+                video.style.pointerEvents = 'auto';
+            }
         });
     </script>
-
 </body>
 </html>
