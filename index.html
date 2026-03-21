@@ -18,15 +18,14 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 90%; max-width: 650px;
+            width: 95%; max-width: 650px;
             margin: 20px;
             display: flex;
             flex-direction: column;
         }
 
-        /* Ortak Başlık Stili */
         .header-title {
-            color: #912d4b; /* Poster mürdüm rengi */
+            color: #912d4b;
             font-size: 20px;
             font-weight: bold;
             letter-spacing: 1.5px;
@@ -49,10 +48,9 @@
             object-fit: cover;
         }
 
-        /* Metin Bloğu Stili */
         .text-block {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .section-title {
@@ -60,7 +58,7 @@
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
 
@@ -70,19 +68,33 @@
             line-height: 1.6;
             text-align: justify;
             margin: 0;
-            font-style: italic; /* İngilizce için italik kalsın, daha şık durur */
+            font-style: italic;
         }
 
         .tr-description {
-            font-style: normal; /* Türkçe için normal font */
+            font-style: normal;
         }
 
-        /* İki dil arası ayırıcı */
         .divider {
             height: 1px;
             background-color: #eee;
-            margin: 20px auto;
+            margin: 15px auto;
             width: 80%;
+        }
+
+        .poster-wrapper {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #d6a4ab;
+            text-align: center;
+        }
+
+        .poster-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -101,7 +113,6 @@
         </div>
 
         <div class="text-block">
-    
             <p class="description">
                 Perfect mathematical forms hidden beneath nature's chaotic appearance are brought back to life through artificial intelligence technologies. This project explores digital ecosystems where algorithmic life meets pure scientific aesthetics.
             </p>
@@ -110,10 +121,14 @@
         <div class="divider"></div>
 
         <div class="text-block">
-            <span class="section-title">(TR) Yapay Doğa, Saf Matematik</span>
+            <span class="section-title">Yapay Doğa, Saf Matematik</span>
             <p class="description tr-description">
                 Doğanın kaotik görünümünün altında gizlenen kusursuz matematiksel formlar, yapay zeka teknolojileriyle yeniden hayat buluyor. Algoritmalardan filizlenen ağaçları ve denklem tabanlı habitatları keşfe çıkarak, bilimin estetikle buluştuğu dijital bir ekosistem yaratıyor.
             </p>
+        </div>
+
+        <div class="poster-wrapper">
+            <img src="poster.jpg" alt="Proje Posteri" class="poster-img">
         </div>
     </div>
 
