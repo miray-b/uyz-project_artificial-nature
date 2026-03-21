@@ -15,11 +15,23 @@
 
         .card {
             background: #ffffff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 90%; max-width: 600px;
+            width: 90%; max-width: 650px;
             margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-title {
+            color: #912d4b;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .video-wrapper {
@@ -35,31 +47,39 @@
             object-fit: cover;
         }
 
-        /* Yeni Açıklama Metni Stili */
-        .description {
+        /* Açıklama Metni Alanı */
+        .description-container {
             margin-top: 20px;
+            border-top: 2px solid #d6a4ab;
+            padding-top: 15px;
+        }
+
+        .eng-text {
             font-style: italic;
-            color: #555;
+            color: #444;
             font-size: 14px;
             line-height: 1.6;
             text-align: justify;
-            border-left: 3px solid #d6a4ab;
-            padding-left: 15px;
+            margin-bottom: 15px;
         }
 
-        .text-content {
-            margin-top: 15px;
-            color: #912d4b; /* Poster başlık rengiyle uyumlu */
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .tr-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+            border-top: 1px dashed #eee; /* İki dil arasında çok ince bir ayırıcı */
+            padding-top: 12px;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <div class="header-title">
+            ARTIFICIAL NATURE, PURE MATH
+        </div>
+
         <div class="video-wrapper">
             <video id="myVideo" controls playsinline preload="auto">
                 <source src="./video.mp4" type="video/mp4">
@@ -67,12 +87,14 @@
             </video>
         </div>
 
-        <div class="description">
-            Perfect mathematical forms hidden beneath nature's chaotic appearance are brought back to life through artificial intelligence technologies. This project explores digital ecosystems where algorithmic life meets pure scientific aesthetics.
-        </div>
-        
-        <div class="text-content">
-            ARTIFICIAL NATURE, PURE MATH
+        <div class="description-container">
+            <div class="eng-text">
+                Perfect mathematical forms hidden beneath nature's chaotic appearance are brought back to life through artificial intelligence technologies. This project explores digital ecosystems where algorithmic life meets pure scientific aesthetics.
+            </div>
+
+            <div class="tr-text">
+                <strong>YAPAY DOĞA, SAF MATEMATİK:</strong> Doğanın kaotik görünümünün altında gizlenen kusursuz matematiksel formlar, yapay zeka teknolojileriyle yeniden hayat buluyor. "Artificial Nature, Pure Math", algoritmalardan filizlenen ağaçları ve denklem tabanlı habitatları keşfe çıkarak, bilimin estetikle buluştuğu dijital bir ekosistem yaratıyor.
+            </div>
         </div>
     </div>
 
